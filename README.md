@@ -1,5 +1,14 @@
 # stolon - PostgreSQL cloud native High Availability
 
+<!-- nucloud:start -->
+[![nucloud](https://github.com/ArmMbedCloud/stolon/actions/workflows/nucloud.yml/badge.svg?branch=nucloud)](https://github.com/ArmMbedCloud/stolon/actions/workflows/nucloud.yml)
+[![nucloud branch](https://img.shields.io/badge/branch-nucloud-blue.svg)](https://github.com/IzumaNetworks/nucloud/blob/main/docs/standards.md)
+[![production](https://img.shields.io/badge/production-v0.16.0-lightgrey.svg)](https://github.com/ArmMbedCloud/stolon/releases/tag/archive/v0.16.0)
+
+Build and deploy: [docs/nucloud.md](docs/nucloud.md).
+<!-- nucloud:end -->
+
+
 [![Build Status](https://run.agola.io/api/v1alpha/badges/org%2Fstolon%2Fstolon?branch=master)](https://run.agola.io/org/stolon/projects/stolon.proj)
 [![Discourse](https://img.shields.io/discourse/https/talk.stolon.io/status.svg)](https://talk.stolon.io)
 [![Go Report Card](https://goreportcard.com/badge/github.com/sorintlab/stolon)](https://goreportcard.com/report/github.com/sorintlab/stolon)
