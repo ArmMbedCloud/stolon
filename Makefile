@@ -1,3 +1,8 @@
+# nucloud entrypoint: isolated Docker targets
+NUCLOUD_TARGETS := help prereqs images build image sbom test smoke image-load deploy push run clean
+ifeq ($(strip $(filter-out $(NUCLOUD_TARGETS),$(MAKECMDGOALS))),)
+include Makefile.nucloud
+else
 PROJDIR=$(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 
 # change to project dir so we can express all as relative paths
@@ -41,6 +46,4 @@ docker:
 	if [ -z $${PGVERSION} ]; then echo 'PGVERSION is undefined'; exit 1; fi; \
 	if [ -z $${TAG} ]; then echo 'TAG is undefined'; exit 1; fi; \
 	docker build --build-arg PGVERSION=${PGVERSION} -t ${TAG} -f examples/kubernetes/image/docker/Dockerfile .
-
-# nucloud targets (image, deploy, ...): see docs/nucloud.md
-include Makefile.nucloud
+endif
